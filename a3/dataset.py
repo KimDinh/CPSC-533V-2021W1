@@ -15,5 +15,4 @@ class Dataset(torch.utils.data.Dataset):
 
     def __getitem__(self, index):
         item = self.data[index]
-        # TODO YOUR CODE HERE
-        raise NotImplementedError()
+        return {'state': item[0].astype('float32'), 'action': item[1]}
